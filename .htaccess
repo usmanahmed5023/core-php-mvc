@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Agar request ki file/folder exist nahi karti
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Har request index.php ko forward ho jae
+RewriteRule ^(.*)$ index.php [QSA,L]
