@@ -17,7 +17,12 @@ if ($uri === '/' || $uri === '/index.php') {
     require 'controllers/index.php';
 } else if ($uri === '/about') {
     require 'controllers/about.php';
-} else if ($uri === '/contact') {
+} 
+else if ($uri === '/notes') {
+    require 'controllers/notes.php';
+}else if ($uri === '/note') {
+    require 'controllers/note.php';
+}else if ($uri === '/contact') {
     require 'controllers/contact.php';
 } else {
    abort();

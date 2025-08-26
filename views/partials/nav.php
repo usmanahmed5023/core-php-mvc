@@ -20,6 +20,12 @@
            <?php echo (basename($_SERVER['PHP_SELF']) == 'about.php') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white'; ?>">
             About
         </a>
+           <!-- Notes -->
+        <a href="/core-php-mvc/notes"
+           class="rounded-md px-3 py-2 text-sm font-medium 
+           <?php echo (basename($_SERVER['PHP_SELF']) == 'notes.php') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white'; ?>">
+            Notes
+        </a>
 
         <!-- Contact -->
         <a href="/core-php-mvc/contact"

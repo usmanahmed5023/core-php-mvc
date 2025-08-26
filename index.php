@@ -1,13 +1,18 @@
 <?php
 require 'functions.php';
+require 'Database.php';
 
-#require 'router.php';
-$dsn = "mysql:host=localhost;port=3306;dbname=myapp;user=root;charset=utf8mb4";
+require 'router.php';
 
-$pdo = new PDO($dsn);
-$statement = $pdo->prepare("SELECT * FROM posts");
-$statement->execute();
-$posts = $statement->fetchAll(PDO::FETCH_ASSOC);
-foreach ($posts as $post) {
-    echo "<li>" . htmlspecialchars($post['title']) . "</li>";
-}
+// $config=require ('config.php');
+
+// $db = new Database($config['database']);
+
+// $id=$_GET['id'] ?? null;
+// $query = "SELECT * FROM posts where id=:id";
+// $posts = $db->query($query, ['id' => $id])->fetchAll();
+// foreach($posts as $post){
+//     echo $post['title'] . "<br>";
+// }
+// dd($posts);
+
