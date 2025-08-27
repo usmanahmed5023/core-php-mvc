@@ -9,7 +9,7 @@
     <p class="text-gray-600 mb-6">
       Sorry 😔, Unauthorized.
     </p>
-    <a href="/core-php-mvc/index.php" 
+    <a href="/core-php-mvc/" 
        class="inline-block px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition">
        ⬅ Back to Home
     </a>
