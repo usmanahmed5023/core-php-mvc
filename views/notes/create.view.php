@@ -1,6 +1,6 @@
-<?php require 'views/partials/head.php'; ?>
-<?php require 'views/partials/nav.php'; ?>
-<?php require 'views/partials/banner.php'; ?>
+<?php require base_path('views/partials/head.php'); ?>
+<?php require base_path('views/partials/nav.php'); ?>
+<?php require base_path('views/partials/banner.php'); ?>
 
 <main class="max-w-3xl mx-auto px-4 py-10">
     <h1 class="text-2xl font-bold text-gray-800 mb-6">Write Note</h1>
@@ -27,4 +27,4 @@
         </div>
     </form>
 </main>
-<?php require 'views/partials/footer.php'; ?>
+<?php require base_path('views/partials/footer.php'); ?>

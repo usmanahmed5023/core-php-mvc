@@ -1,9 +1,13 @@
 <?php
-
-$config=require ('config.php');
+use Core\Database;
+$config=require base_path('config.php');
 
 $db = new Database($config['database']);
 
-$heading = 'Notes - My Web Page';
 $notes=$db->query('SELECT * FROM notes')->get();
-require 'views/notes/index.view.php';
+
+
+ view('notes/index.view.php',[
+    'heading' => 'Notes - My Web Page',
+    'notes' => $notes
+ ]);

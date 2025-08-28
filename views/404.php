@@ -1,5 +1,5 @@
-<?php require 'partials/head.php'; ?>
-<?php require 'partials/nav.php'; ?>
+<?php require base_path('views/partials/head.php'); ?>
+<?php require base_path('views/partials/nav.php'); ?>
 
 
 <main class="flex items-center justify-center h-[70vh]">
@@ -9,11 +9,11 @@
     <p class="text-gray-600 mb-6">
       Sorry 😔, the page you are looking for could not be found.
     </p>
-    <a href="/core-php-mvc/" 
+    <a href="/" 
        class="inline-block px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition">
        ⬅ Back to Home
     </a>
   </div>
 </main>
 
-<?php require 'partials/footer.php'; ?>
+<?php require base_path('views/partials/footer.php'); ?>

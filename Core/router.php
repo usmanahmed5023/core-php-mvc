@@ -1,10 +1,10 @@
 <?php
-$routes=require 'routes.php';
+$routes=require base_path('routes.php');
     $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-$base = '/core-php-mvc';
+// $base = '/core-php-mvc';
 
 
-$uri = str_replace($base, '', $uri);
+// $uri = str_replace($base, '', $uri);
 
 // Routes
 // if ($uri === '/' || $uri === '/index.php') {
@@ -23,16 +23,17 @@ $uri = str_replace($base, '', $uri);
 // }
 
 
-function routeToController($uri,$routes) {
+function routeToController($uri, $routes) {
     if(array_key_exists($uri, $routes)){
-        require $routes[$uri];
-    }else{
+        require base_path($routes[$uri]);
+    } else {
         abort();
     }
 }
+
 function abort() {
             http_response_code( Response::HTTP_NOT_FOUND);
-    require 'views/404.php';
+    require base_path('views/404.php');
 
     die();
 }

@@ -8,27 +8,27 @@
         <div class="hidden md:block">
     <div class="ml-10 flex items-baseline space-x-4">
         <!-- Home -->
-        <a href="/core-php-mvc/"
+        <a href="/"
            class="rounded-md px-3 py-2 text-sm font-medium 
            <?php echo (basename($_SERVER['PHP_SELF']) == 'index.php') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white'; ?>">
             Home
         </a>
 
         <!-- About -->
-        <a href="/core-php-mvc/about"
+        <a href="/about"
            class="rounded-md px-3 py-2 text-sm font-medium 
            <?php echo (basename($_SERVER['PHP_SELF']) == 'about.php') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white'; ?>">
             About
         </a>
            <!-- Notes -->
-        <a href="/core-php-mvc/notes"
+        <a href="/notes"
            class="rounded-md px-3 py-2 text-sm font-medium 
            <?php echo (basename($_SERVER['PHP_SELF']) == 'notes.php') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white'; ?>">
             Notes
         </a>
 
         <!-- Contact -->
-        <a href="/core-php-mvc/contact"
+        <a href="/contact"
            class="rounded-md px-3 py-2 text-sm font-medium 
            <?php echo (basename($_SERVER['PHP_SELF']) == 'contact.php') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white'; ?>">
             Contact us
