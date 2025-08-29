@@ -1,6 +1,7 @@
 <?php
-use Core\App;   
+use Core\App;
 use Core\Database;
+
 $db=App::resolve(Database::class);
 
 
@@ -13,8 +14,8 @@ $currentUserId = 1;
 
     authorize((int)$notes['user_id'] === (int)$currentUserId);
 
-    view('notes/show.view.php',[
-    'heading' => 'Notes - My Web Page',
+ view('notes/edit.view.php',[
+    'heading' => 'Edit-Notes',
+    'errors' => [],
     'notes' => $notes
  ]);
-
