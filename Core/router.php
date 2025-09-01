@@ -1,6 +1,10 @@
 <?php
 
 namespace Core;
+
+use Core\Middleware\Auth;
+use Core\Middleware\Guest;
+use Core\Middleware\Middleware;
 class Router
 {
     protected $routes = [];
@@ -11,6 +15,7 @@ class Router
             'uri' => $uri,
             'controller' => $controller,
             'method' => $method,
+            'middleware' =>  null
             ];
 
         return $this;
@@ -40,18 +45,29 @@ class Router
     {
         return $this->add('PUT', $uri, $controller);
     }
+    public function only($key)
+    {
+        $this->routes[array_key_last($this->routes)]['middleware'] = $key;
+
+        return $this;
+    }
 
 public function routes($uri, $method)
 {
     foreach ($this->routes as $route) {
         if ($route['uri'] === $uri && $route['method'] === strtoupper($method)) {
-            require base_path($route['controller']);
+            if ($route['middleware']) {
+                Middleware::resolve($route['middleware']);
+            }
+
+            require base_path('Http/controllers/' . $route['controller']);
             return;
         }
     }
 
     $this->abort();
 }
+
 
 function abort() {
             http_response_code( Response::HTTP_NOT_FOUND);
