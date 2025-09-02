@@ -1,0 +1,17 @@
+{
+    "name": "usman/core-php-mvc",
+    "authors": [
+        {
+            "name": "usmanahmed5023",
+            "email": "usmanahmed5023@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core/",
+            "Http\\": "Http/"
+        }
+    }
+
+}

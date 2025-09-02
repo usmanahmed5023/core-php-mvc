@@ -67,6 +67,10 @@ public function routes($uri, $method)
 
     $this->abort();
 }
+public function previousUrl()
+    {
+        return $_SERVER['HTTP_REFERER'];
+    }
 
 
 function abort() {

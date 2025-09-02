@@ -16,19 +16,26 @@
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm bg-white p-6 rounded-lg shadow-md">
       <form action="/sessions" method="POST" class="space-y-6">
         
-        <!-- Email -->
-        <div>
-          <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
-          <div class="mt-2">
-            <input id="email" type="email" name="email" required autocomplete="email"
-              class="block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-400 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" />
-          </div>
-          <div class="text-sm text-red-600">
-            <?php if (isset($errors['email'])) : ?>
-              <p><?php echo $errors['email']; ?></p>
-            <?php endif; ?>
-          </div>
-        </div>
+       <!-- Email -->
+<div>
+  <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+  <div class="mt-2">
+    <input id="email" 
+           type="email" 
+           name="email" 
+           required 
+           autocomplete="email"
+           value="<?php echo old('email') ?>" 
+           class="block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-400 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" 
+           placeholder="Email address" />
+  </div>
+  <div class="text-sm text-red-600">
+    <?php if (isset($errors['email'])) : ?>
+      <p><?php echo $errors['email']; ?></p>
+    <?php endif; ?>
+  </div>
+</div>
+
 
         <!-- Password -->
         <div>

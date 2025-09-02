@@ -1,6 +1,9 @@
 <?php
-    $_SESSION=[];
-    session_destroy();
+
+use Core\Authenticator;
+
+$auth = new Authenticator();
+$auth->logout();
 
    header('Location: /');
     exit();
